@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -12,15 +14,64 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 96px;
+}
+
+html.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: #ffffff;
+}
+
+.footer-link {
+  color: rgb(71 85 105);
+  transition:
+    color 200ms ease,
+    transform 200ms ease;
+}
+
+.footer-link:hover {
+  color: rgb(8 145 178);
+  transform: translateX(2px);
+}
+
+.dark .footer-link {
+  color: rgb(148 163 184);
+}
+
+.dark .footer-link:hover {
+  color: rgb(103 232 249);
+}
+
+.mesh-gradient {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(34, 211, 238, 0.24), transparent 28%),
+    radial-gradient(circle at 70% 0%, rgba(124, 58, 237, 0.28), transparent 32%),
+    radial-gradient(circle at 90% 70%, rgba(59, 130, 246, 0.22), transparent 30%);
+}
+
+.glass-ring {
+  position: relative;
+}
+
+.glass-ring::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.45), rgba(124, 58, 237, 0.45), transparent);
+  opacity: 0.65;
 }
