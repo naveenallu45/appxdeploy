@@ -115,14 +115,14 @@ function DashboardMockup() {
               <CheckCircle2 className="h-10 w-10 text-white" />
             </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4">
             {metrics.map((metric) => {
               const Icon = metric.icon;
               return (
-                <div key={metric.label} className="rounded-3xl border border-white/10 bg-white/[0.06] p-4">
-                  <Icon className="h-5 w-5 text-cyan-300" />
-                  <p className="mt-5 text-2xl font-semibold">{metric.value}</p>
-                  <p className="mt-1 text-xs text-slate-400">{metric.label}</p>
+                <div key={metric.label} className="rounded-2xl border border-white/10 bg-white/[0.06] p-3 sm:rounded-3xl sm:p-4">
+                  <Icon className="h-4 w-4 text-cyan-300 sm:h-5 sm:w-5" />
+                  <p className="mt-4 text-lg font-semibold sm:mt-5 sm:text-2xl">{metric.value}</p>
+                  <p className="mt-1 text-[10px] leading-4 text-slate-400 sm:text-xs">{metric.label}</p>
                 </div>
               );
             })}
