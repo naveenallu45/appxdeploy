@@ -144,7 +144,7 @@ export function getServiceBySlug(slug: string) {
 
 export const stats = [
   { label: "Projects", value: 120, suffix: "+", icon: Rocket },
-  { label: "Clients", value: 50, suffix: "+", icon: BadgeCheck },
+  { label: "Clients", value: 100, suffix: "+", icon: BadgeCheck },
   { label: "Years Experience", value: 5, suffix: "+", icon: Gem },
   { label: "Launch Reliability", value: 99, suffix: "%", icon: ShieldCheck },
 ];
