@@ -279,6 +279,10 @@ export const offices = [
     city: "Chennai Office",
     address: ["IIT Madras Research Park,", "Taramani, Chennai, Tamil Nadu"],
   },
+  {
+    city: "Remote Worldwide",
+    address: ["Remote delivery for clients", "across India and global markets"],
+  },
 ];
 
 export const serviceOptions = services.map((service) => service.title);

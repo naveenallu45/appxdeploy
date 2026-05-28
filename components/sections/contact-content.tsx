@@ -14,7 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { offices, serviceOptions } from "@/lib/site-data";
 
 const contactCards = [
-  { label: "Email", value: "connect@appxdeploy.com", icon: Mail },
+  { label: "Email", value: "connect@appxdeploy.com", href: "mailto:connect@appxdeploy.com", icon: Mail },
   { label: "Response", value: "Within 1 business day", icon: Send },
 ];
 
@@ -104,7 +104,7 @@ export function ContactContent() {
               </Card>
             </Reveal>
 
-            <div className="grid gap-5">
+            <div className="grid content-start gap-5">
               <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
                 {contactCards.map((card) => {
                   const Icon = card.icon;
@@ -113,24 +113,21 @@ export function ContactContent() {
                       <Card className="p-6">
                         <Icon className="h-6 w-6 text-cyan-500" />
                         <p className="mt-5 text-sm text-slate-500 dark:text-slate-400">{card.label}</p>
-                        <p className="mt-1 font-semibold text-slate-950 dark:text-white">{card.value}</p>
+                        {"href" in card ? (
+                          <a
+                            href={card.href}
+                            className="mt-1 block font-semibold text-slate-950 transition hover:text-cyan-600 dark:text-white dark:hover:text-cyan-300"
+                          >
+                            {card.value}
+                          </a>
+                        ) : (
+                          <p className="mt-1 font-semibold text-slate-950 dark:text-white">{card.value}</p>
+                        )}
                       </Card>
                     </StaggerItem>
                   );
                 })}
               </Stagger>
-
-              <Reveal>
-                <Card className="overflow-hidden">
-                  <iframe
-                    title="Google map showing AppxDeploy Hyderabad office area"
-                    src="https://www.google.com/maps?q=T-Hub%20Raidurgam%20Hyderabad&output=embed"
-                    className="h-72 w-full border-0 grayscale transition hover:grayscale-0"
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </Card>
-              </Reveal>
             </div>
           </div>
         </div>
@@ -141,11 +138,11 @@ export function ContactContent() {
           <Reveal>
             <SectionHeading
               eyebrow="Office locations"
-              title="Built in India, available for ambitious teams everywhere"
-              description="Connect with AppxDeploy through our Hyderabad, Bengaluru, and Chennai office locations."
+              title="Built in India, available remotely worldwide"
+              description="Connect with AppxDeploy through our India office locations or work with us remotely from anywhere."
             />
           </Reveal>
-          <Stagger className="mt-14 grid gap-6 md:grid-cols-3">
+          <Stagger className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {offices.map((office) => (
               <StaggerItem key={office.city}>
                 <Card className="h-full p-7">

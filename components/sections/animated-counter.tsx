@@ -11,7 +11,7 @@ export function AnimatedCounter({
   suffix?: string;
 }) {
   const ref = React.useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, margin: "0px", initial: true });
   const motionValue = useMotionValue(0);
   const spring = useSpring(motionValue, { duration: 1800, bounce: 0 });
   const [display, setDisplay] = React.useState(0);
@@ -20,6 +20,12 @@ export function AnimatedCounter({
     if (inView) {
       motionValue.set(value);
     }
+
+    const fallback = window.setTimeout(() => {
+      motionValue.set(value);
+    }, 400);
+
+    return () => window.clearTimeout(fallback);
   }, [inView, motionValue, value]);
 
   React.useEffect(() => {

@@ -26,6 +26,15 @@ export default function ServicesPage() {
             title="Software, cloud, and growth services built for modern teams"
             description="Choose a focused service or bring us in as a full-stack delivery partner across strategy, design, development, cloud, marketing, and support."
           />
+          <p className="mt-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+            Need help choosing a service? Email{" "}
+            <a
+              href="mailto:connect@appxdeploy.com"
+              className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+            >
+              connect@appxdeploy.com
+            </a>
+          </p>
         </Reveal>
       </section>
       <ServiceGrid showHeading={false} />

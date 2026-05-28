@@ -48,6 +48,15 @@ export function HeroSection() {
               View Services
             </Link>
           </div>
+          <p className="mt-5 text-sm font-medium text-slate-600 dark:text-slate-400">
+            For project enquiries, email{" "}
+            <a
+              href="mailto:connect@appxdeploy.com"
+              className="text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+            >
+              connect@appxdeploy.com
+            </a>
+          </p>
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {stats.map((stat) => {
               const Icon = stat.icon;
@@ -100,7 +109,7 @@ function DashboardMockup() {
             <p className="text-sm text-white/80">Digital growth system</p>
             <div className="mt-8 flex items-end justify-between">
               <div>
-                <p className="text-4xl font-semibold tracking-tight">12 services</p>
+                <p className="text-4xl font-semibold tracking-tight">Full-stack delivery</p>
                 <p className="mt-2 text-sm text-white/75">Web, mobile, cloud, SEO, and ads aligned</p>
               </div>
               <CheckCircle2 className="h-10 w-10 text-white" />
@@ -120,7 +129,7 @@ function DashboardMockup() {
           </div>
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-4">
             <div className="mb-4 flex items-center justify-between text-sm">
-              <span className="text-slate-300">Website readiness</span>
+              <span className="text-slate-300">Delivery readiness</span>
               <span className="text-cyan-300">99%</span>
             </div>
             <div className="h-3 overflow-hidden rounded-full bg-white/10">

@@ -45,6 +45,12 @@ export function Footer() {
             <p className="max-w-sm text-sm leading-7">
               Modern apps, websites, cloud infrastructure, SEO, and marketing systems for startups and ambitious businesses.
             </p>
+            <Link
+              href="mailto:connect@appxdeploy.com"
+              className="inline-flex text-sm font-semibold text-cyan-600 transition hover:text-blue-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+            >
+              connect@appxdeploy.com
+            </Link>
             <div className="flex gap-3">
               {socials.map((social) => {
                 const Icon = social.icon;
@@ -98,7 +104,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-4 border-t border-slate-200 pt-8 dark:border-white/10 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 border-t border-slate-200 pt-8 dark:border-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {offices.map((office) => (
             <div key={office.city} className="rounded-3xl border border-slate-200 bg-white/60 p-5 text-sm dark:border-white/10 dark:bg-white/[0.03]">
               <p className="font-semibold text-slate-950 dark:text-white">{office.city}</p>
