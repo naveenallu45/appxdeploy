@@ -20,8 +20,11 @@ export function AboutContent() {
               align="left"
               eyebrow="About AppxDeploy"
               title="A product, cloud, and growth partner for modern businesses"
-              description="We help founders and teams turn ideas into fast, beautiful, reliable digital products. Our work spans strategy, design, engineering, cloud deployment, SEO, paid campaigns, and long-term support."
             />
+            <p className="mt-5 hidden text-base leading-8 text-slate-600 dark:text-slate-400 sm:block sm:text-lg">
+              We help founders and teams turn ideas into fast, beautiful, reliable digital products. Our work spans
+              strategy, design, engineering, cloud deployment, SEO, paid campaigns, and long-term support.
+            </p>
           </Reveal>
           <Reveal delay={0.1}>
             <Card className="p-8">
@@ -32,16 +35,16 @@ export function AboutContent() {
               <p className="mt-5 text-base leading-8 text-slate-600 dark:text-slate-400">
                 Our vision is to make enterprise-quality product execution accessible to startups, SMBs, and teams that need a practical partner from first concept to post-launch growth.
               </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4">
                 {stats.slice(0, 3).map((stat) => {
                   const Icon = stat.icon;
                   return (
-                    <div key={stat.label} className="rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/[0.04]">
-                      <Icon className="mb-4 h-5 w-5 text-cyan-500" />
-                      <p className="text-3xl font-semibold text-slate-950 dark:text-white">
+                    <div key={stat.label} className="rounded-2xl border border-slate-200 bg-slate-50 p-3 dark:border-white/10 dark:bg-white/[0.04] sm:rounded-3xl sm:p-4">
+                      <Icon className="mb-3 h-4 w-4 text-cyan-500 sm:mb-4 sm:h-5 sm:w-5" />
+                      <p className="text-xl font-semibold text-slate-950 dark:text-white sm:text-3xl">
                         <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                       </p>
-                      <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{stat.label}</p>
+                      <p className="mt-1 text-[10px] leading-4 text-slate-500 dark:text-slate-400 sm:text-xs">{stat.label}</p>
                     </div>
                   );
                 })}

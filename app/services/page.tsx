@@ -24,8 +24,11 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Services"
             title="Software, cloud, and growth services built for modern teams"
-            description="Choose a focused service or bring us in as a full-stack delivery partner across strategy, design, development, cloud, marketing, and support."
           />
+          <p className="mx-auto mt-5 hidden max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-400 sm:block">
+            Choose a focused service or bring us in as a full-stack delivery partner across strategy, design,
+            development, cloud, marketing, and support.
+          </p>
           <p className="mt-6 text-sm font-medium text-slate-600 dark:text-slate-400">
             Need help choosing a service? Email{" "}
             <a

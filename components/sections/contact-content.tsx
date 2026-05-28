@@ -56,8 +56,11 @@ export function ContactContent() {
             <SectionHeading
               eyebrow="Contact"
               title="Tell us what you want to build"
-              description="Share your goals and preferred service. We will respond with a practical next step for design, development, cloud, SEO, ads, or support."
             />
+            <p className="mx-auto mt-5 hidden max-w-3xl text-center text-lg leading-8 text-slate-600 dark:text-slate-400 sm:block">
+              Share your goals and preferred service. We will respond with a practical next step for design,
+              development, cloud, SEO, ads, or support.
+            </p>
           </Reveal>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
